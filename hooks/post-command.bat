@@ -60,7 +60,7 @@ if "%add_parameter%" == "" (
 git add -A "%add_parameter%"
 
 git diff-index --quiet HEAD
-if %errorlevel% NEQ '0' (
+if %errorlevel% NEQ 0 (
 	echo --- Committing changes
 	git commit -m "%message%"
 	echo --- Pushing to origin
